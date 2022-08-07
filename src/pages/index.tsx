@@ -9,6 +9,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Благая весть - Христос.ру</title>
         <meta name="description" content="Получайте каждый день случайно выбранную весть из святого благовествования, рассуждайте над ней и исполняйте её."/>
+        <meta name="google-site-verification" content="vXFJY6qa02YoVojnkMHtzPKk9zyxjZ1rV6h7jgFiULw" />
+        <meta name="yandex-verification" content="85cde1de6d071cbe" />
       </Head>
       <MainLayout title="Благая весть" desc="Получайте каждый день случайно выбранную весть из святого благовествования, рассуждайте над ней и исполняйте её.">
         <HomeContent/>
