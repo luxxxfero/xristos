@@ -3,6 +3,7 @@ import Head from "next/head";
 import MainLayout from "../layouts/main-layout";
 import {data} from "../constants";
 import VerseContent from "../components/verse-content/verse-content";
+import {useRouter} from "next/router";
 
 type VersePageProps = {
   verse: {id: number, desc: string}
@@ -18,6 +19,8 @@ const Verse: NextPage<VersePageProps> = ({verse}) => {
       <Head>
         <title>{title}</title>
         <meta name="description" content={desc}/>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={desc}/>
       </Head>
       <MainLayout title="Благая весть" desc="Получайте каждый день случайно выбранную весть из святого благовествования, рассуждайте над ней и исполняйте её.">
         <VerseContent verse={verse}/>

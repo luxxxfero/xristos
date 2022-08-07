@@ -12,6 +12,8 @@ const Thanks: NextPage = () => {
       <Head>
         <title>{title}</title>
         <meta name="description" content={desc}/>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={desc}/>
       </Head>
       <MainLayout title="Благая весть"
                   desc="Получайте каждый день случайно выбранную весть из святого благовествования, рассуждайте над ней и исполняйте её.">

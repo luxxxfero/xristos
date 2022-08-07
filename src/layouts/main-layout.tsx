@@ -6,6 +6,7 @@ import WhatsappIcon from "../components/icons/whatsapp";
 import VKIcon from "../components/icons/vk";
 import TelegramIcon from "../components/icons/telegram";
 import cn from "classnames";
+import {useRouter} from "next/router";
 
 interface MainLayout extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   title: string,
@@ -13,6 +14,8 @@ interface MainLayout extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTML
 }
 
 const MainLayout: React.FC<MainLayout> = ({children, title, desc}) => {
+  const router = useRouter();
+  const url = `https://xristos.ru${router.asPath}`
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -34,16 +37,16 @@ const MainLayout: React.FC<MainLayout> = ({children, title, desc}) => {
               <h4 className={styles.shareTitle}>
                 Поделиться
               </h4>
-              <a target="_blank" rel="noreferrer" href="https://connect.ok.ru/offer?url=https://xristos.ru/&title=Благая весть - Христос.ру&utm_source=share2" className={cn(styles.shareLink)}>
+              <a target="_blank" rel="noreferrer" href={`https://connect.ok.ru/offer?url=${url}&title=Благая весть - Христос.ру&utm_source=share2`} className={cn(styles.shareLink)}>
                 <OKIcon className={cn(styles.shareIcon)}/>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?text=Благая весть - Христос.ру https://xristos.ru/&utm_source=share2" className={cn(styles.shareLink)}>
+              <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?text=Благая весть - Христос.ру ${url}&utm_source=share2`} className={cn(styles.shareLink)}>
                 <WhatsappIcon className={cn(styles.shareIcon)}/>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://vk.com/share.php?url=https://xristos.ru/&title=Благая весть - Христос.ру&utm_source=share2" className={cn(styles.shareLink)}>
+              <a target="_blank" rel="noreferrer" href={`https://vk.com/share.php?url=${url}&title=Благая весть - Христос.ру&utm_source=share2`} className={cn(styles.shareLink)}>
                 <VKIcon className={cn(styles.shareIcon)}/>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://t.me/share/url?url=https://xristos.ru/&text=Благая весть - Христос.ру&utm_source=share2" className={cn(styles.shareLink)}>
+              <a target="_blank" rel="noreferrer" href={`https://t.me/share/url?url=${url}&text=Благая весть - Христос.ру&utm_source=share2`} className={cn(styles.shareLink)}>
                 <TelegramIcon className={cn(styles.shareIcon)}/>
               </a>
             </div>
