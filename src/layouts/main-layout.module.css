@@ -44,3 +44,40 @@
   border-radius: 10px;
   padding: 30px 15px;
 }
+
+.mainFooter {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.shareTitle {
+  margin: 0;
+  padding: 0;
+}
+
+.shareLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareIcon {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 480px) {
+  .mainFooter {
+    flex-direction: column;
+  }
+}
